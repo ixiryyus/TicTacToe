@@ -1,8 +1,12 @@
-package morpion;
+package tictactoe;
 
 public class Board {
 
-    public static void initNewBoard(){
+
+    public static char[][] board = new char[3][3];
+
+
+    public  void initNewBoard(){
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 board[i][j] = '_';
@@ -10,7 +14,7 @@ public class Board {
         }
 
     }
-    public static void printBoard(){
+    public  void printBoard(){
 
     }
 }

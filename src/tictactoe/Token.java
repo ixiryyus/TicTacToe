@@ -1,4 +1,4 @@
-package morpion;
+package tictactoe;
 
 public class Token {
 
