@@ -23,12 +23,20 @@ class Game {
 
 
         map.printBoard();
+        double firstplayer = Math.random() * (2);
+
+                if (firstplayer < 1)
+                    System.out.println("C'est au tour de X");
+                if (firstplayer > 1)
+                    System.out.println("C'est au tour de O");
+
         while (winner.Winner()) {
 
             row = input.nextInt();
             col = input.nextInt();
             if (row > 3 || col > 3) {
-                System.err.println("Dans le tableaux, c'est mieux!!\nTry again!");
+                System.out.println("Dans le tableaux, c'est mieux!!\nTry again!");
+                StartGame();
 
             } else {
                 if (fullPlace.isFull(row, col)) {
@@ -39,7 +47,7 @@ class Game {
                     map.printBoard();
                     playerChanger.whichPlayer();
                 }
-
+                StartGame();
             }
 
 

@@ -22,9 +22,6 @@ public class HasWon {
             return false;
         if (board[0][2] != '_' && board[0][2] == board[1][1] && board[0][2] == board[2][0])
             return false;
-        else {
-            System.out.println("Aucun joueur ne gagne ");
-        }
 
         return true;
     }
