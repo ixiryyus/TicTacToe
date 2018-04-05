@@ -7,7 +7,7 @@ class Game {
     Place.FullPlace fullPlace = new Place.FullPlace();
     ChangePlayer playerChanger = new ChangePlayer();
     HasWon winner = new HasWon();
-    Scanner input = new Scanner(System.in);
+    Scanner input = new Scanner(System.in); //instanciation de class
     char[][] board = PrintBoard.board;
     int row, col;
 
@@ -23,12 +23,9 @@ class Game {
 
 
         map.printBoard();
-        double firstplayer = Math.random() * (2);
-
-                if (firstplayer < 1)
+       
                     System.out.println("C'est au tour de X");
-                if (firstplayer > 1)
-                    System.out.println("C'est au tour de O");
+
 
         while (winner.Winner()) {
 
@@ -36,7 +33,6 @@ class Game {
             col = input.nextInt();
             if (row > 3 || col > 3) {
                 System.out.println("Dans le tableaux, c'est mieux!!\nTry again!");
-                StartGame();
 
             } else {
                 if (fullPlace.isFull(row, col)) {
@@ -47,7 +43,7 @@ class Game {
                     map.printBoard();
                     playerChanger.whichPlayer();
                 }
-                StartGame();
+
             }
 
 
